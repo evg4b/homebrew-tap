@@ -5,21 +5,21 @@
 class Uncors < Formula
   desc "A simple dev HTTP/HTTPS reverse proxy for replacing CORS headers."
   homepage "https://github.com/evg4b/uncors"
-  version "0.0.8-beta"
+  version "0.0.9"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/evg4b/uncors/releases/download/v0.0.8-beta/uncors_0.0.8-beta_darwin_amd64.tar.gz"
-      sha256 "bbba1aafa678dd5b59a260912a5eea52c69e30ad6ac2a946a240442aa24dffc9"
+    if Hardware::CPU.arm?
+      url "https://github.com/evg4b/uncors/releases/download/v0.0.9/uncors_0.0.9_darwin_arm64.tar.gz"
+      sha256 "65f703cd036a63f992ab0f13b901216d9c47e95df0429fed19e327f75bf15f91"
 
       def install
         bin.install "uncors"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/evg4b/uncors/releases/download/v0.0.8-beta/uncors_0.0.8-beta_darwin_arm64.tar.gz"
-      sha256 "645d6a66f61dfdc0086ad879992e14916c6a106aa445925e6fc0cabaa20d887b"
+    if Hardware::CPU.intel?
+      url "https://github.com/evg4b/uncors/releases/download/v0.0.9/uncors_0.0.9_darwin_amd64.tar.gz"
+      sha256 "5fba821a3f50e8eac61a8b4cb6f46c0ee8a5988d8d5606c7379246cc1fe44426"
 
       def install
         bin.install "uncors"
@@ -29,24 +29,24 @@ class Uncors < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/evg4b/uncors/releases/download/v0.0.8-beta/uncors_0.0.8-beta_linux_armv6.tar.gz"
-      sha256 "2e7eaddf1f3cd04a49e05f2781affde69303b45eaebe09642228134b2c57cbd1"
-
-      def install
-        bin.install "uncors"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/evg4b/uncors/releases/download/v0.0.8-beta/uncors_0.0.8-beta_linux_amd64.tar.gz"
-      sha256 "daa1c9f3b40e66de3ec4d20b0007647d08a4410e9214fef7f5f8cdcc4320a68a"
+      url "https://github.com/evg4b/uncors/releases/download/v0.0.9/uncors_0.0.9_linux_armv6.tar.gz"
+      sha256 "e05c157fc5bcc4fc8bb6b9e4991a132fddacdaa75d6203f7d8c7cf70a921ffcd"
 
       def install
         bin.install "uncors"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/evg4b/uncors/releases/download/v0.0.8-beta/uncors_0.0.8-beta_linux_arm64.tar.gz"
-      sha256 "f1a5b5734b4511b6de0c304a7e7b02a6c3cca173e6ae66faf066675438849cdb"
+      url "https://github.com/evg4b/uncors/releases/download/v0.0.9/uncors_0.0.9_linux_arm64.tar.gz"
+      sha256 "7790669456ce561cc9dfbb47be4ef05f9b303c2f05750e031260cb183727d5cf"
+
+      def install
+        bin.install "uncors"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/evg4b/uncors/releases/download/v0.0.9/uncors_0.0.9_linux_amd64.tar.gz"
+      sha256 "fe7b58a2826e75aa337766b72465f39c184006f68be1d81a8afc930bc4f31a3e"
 
       def install
         bin.install "uncors"
