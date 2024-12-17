@@ -8,3 +8,4 @@
 ### Applications
 
 - [uncors](https://github.com/evg4b/uncors) - A simple dev HTTP/HTTPS proxy for replacing CORS headers. ([Formula](./Formula/uncors.rb))
+- [donkey](https://github.com/evg4b/donkey) - 🫏 A small utility for batch file rpecessing using AI. ([Manifest](./Formula/donkey.rb))
