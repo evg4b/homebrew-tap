@@ -5,21 +5,21 @@
 class Donkey < Formula
   desc "🫏 A small utility for batch file rpecessing using AI"
   homepage "https://github.com/evg4b/donkey"
-  version "0.0.2"
+  version "0.0.3"
   license "GPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/evg4b/donkey/releases/download/v0.0.2/donkey_Darwin_x86_64.tar.gz"
-      sha256 "a6a2ddaf8fc05f5d02eea4ef5d25c2eeec9dfcf65ea6b02a8180f544340a2c25"
+      url "https://github.com/evg4b/donkey/releases/download/v0.0.3/donkey_Darwin_x86_64.tar.gz"
+      sha256 "2d4e46649ce834636b2753c3ee0b49fdeb95c81a498f300dd64a62094467f9b6"
 
       def install
         bin.install "donkey"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/evg4b/donkey/releases/download/v0.0.2/donkey_Darwin_arm64.tar.gz"
-      sha256 "c6d9c277d95979eaa41ac6f7eae4462ac705c4cf1b8fac5e6472797180f28a53"
+      url "https://github.com/evg4b/donkey/releases/download/v0.0.3/donkey_Darwin_arm64.tar.gz"
+      sha256 "9fdd071642b99532a444eef0dfba10d211c6e68066df771fbade36451b73ca64"
 
       def install
         bin.install "donkey"
@@ -30,8 +30,8 @@ class Donkey < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/evg4b/donkey/releases/download/v0.0.2/donkey_Linux_x86_64.tar.gz"
-        sha256 "7d58b8f39bb5bcec63e8bfb635fdbf11542a8d4eb8843778da89aac7371075a1"
+        url "https://github.com/evg4b/donkey/releases/download/v0.0.3/donkey_Linux_x86_64.tar.gz"
+        sha256 "24fe8ace217618abd55064f17e87a28dbacceddfb37b58bfd0955b41969f6d18"
 
         def install
           bin.install "donkey"
@@ -40,8 +40,8 @@ class Donkey < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/evg4b/donkey/releases/download/v0.0.2/donkey_Linux_arm64.tar.gz"
-        sha256 "6d5ed181986d848cb6796e04000112ab524d3105caddd4d6b003800e1c446aef"
+        url "https://github.com/evg4b/donkey/releases/download/v0.0.3/donkey_Linux_arm64.tar.gz"
+        sha256 "6bc04ca6090c696c83c028a8ad2d02b3a63745b8028413c6529718a4fa47254f"
 
         def install
           bin.install "donkey"
